@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок как на других экранах -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="НПС"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Название и правитель -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Название страны"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etCountryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Имя правителя (НПС)"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etRulerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Примечание (для админа)"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etNpcNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Экономика -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Экономика"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Деньги"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Рабочие (население)"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etWorkers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Земля"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etLand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Еда"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Дерево"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etWood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Минералы"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etMineral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <!-- Здания -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Здания"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Комбинат (domik1)"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etDom1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Городок (domik2)"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etDom2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Командный центр (domik3)"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etDom3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Военная база (domik4)"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etDom4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Периметр (domik5)"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etDom5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Биржа (domik6)"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etDom6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сторожевая башня (domik7)"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etDom7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <!-- Армия -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Армия"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Пехота"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etInfantry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Казаки"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etCossacks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Гвардия"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etGuards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Катапульты"
+            android:textColor="@color/derzhava_text_dark" />
+
+        <EditText
+            android:id="@+id/etCatapults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <!-- Кнопки -->
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Сохранить" />
+<Button
+    android:id="@+id/btnNpcMarket"
+    style="@style/Derzhava.Button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:text="Товары на бирже" />
+        <Button
+            android:id="@+id/btnBackToAdmin"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Вернуться в админку" />
+
+    </LinearLayout>
+</ScrollView>

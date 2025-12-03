@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="БИРЖА"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCountryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Государство"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRulerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Правитель"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Выберите ресурс, чтобы увидеть предложения и торговать."
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp" />
+
+        <!-- Деньги и ресурсы -->
+        <TextView
+            android:id="@+id/tvMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Деньги: 0"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvMetal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Металл: 0"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvMineral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Камень: 0"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvWood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Дерево: 0"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvFood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Зерно: 0"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvWorkers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Рабочие: 0"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvBots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Учёные: 0"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp" />
+
+        <!-- Кнопки по ресурсам -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Выберите ресурс:"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnMetal"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Железо" />
+
+        <Button
+            android:id="@+id/btnMineral"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Камень" />
+
+        <Button
+            android:id="@+id/btnWood"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Дерево" />
+
+        <Button
+            android:id="@+id/btnFood"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Зерно" />
+
+        <Button
+            android:id="@+id/btnWorkers"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Рабочие" />
+
+        <Button
+            android:id="@+id/btnBots"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Учёные" />
+    </LinearLayout>
+</ScrollView>

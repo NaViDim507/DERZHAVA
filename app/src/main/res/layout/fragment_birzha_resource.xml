@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="БИРЖА"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Кто мы -->
+        <TextView
+            android:id="@+id/tvCountryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Государство" />
+
+        <TextView
+            android:id="@+id/tvRulerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp"
+            android:text="Правитель" />
+
+        <!-- Наши деньги и ресурс -->
+        <TextView
+            android:id="@+id/tvMyMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp"
+            android:text="Деньги: 0" />
+
+        <TextView
+            android:id="@+id/tvMyResource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp"
+            android:text="Ресурс: 0" />
+
+        <!-- Диапазон цен -->
+        <TextView
+            android:id="@+id/tvPriceRange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="12sp"
+            android:text="Диапазон цен" />
+
+        <!-- Предупреждение про войну -->
+        <TextView
+            android:id="@+id/tvWarWarning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:text="Во время активной войны торговать нельзя." />
+
+        <!-- Кнопки действий -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSell"
+                style="@style/Derzhava.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Продать / лот" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                style="@style/Derzhava.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Обновить" />
+        </LinearLayout>
+
+        <!-- Заголовок списка -->
+        <TextView
+            android:id="@+id/tvOffersTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Предложения других государств:"
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Если нет предложений -->
+        <TextView
+            android:id="@+id/tvEmptyOffers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Пока никто не выставил этот ресурс на продажу."
+            android:textColor="@color/derzhava_button_text"
+            android:textSize="13sp" />
+
+        <!-- Контейнер для карточек лотов -->
+        <LinearLayout
+            android:id="@+id/offersContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+</ScrollView>

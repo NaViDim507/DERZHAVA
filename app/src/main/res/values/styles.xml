@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ТЕМА приложения, на которую ссылается манифест: @style/Derzhava -->
+    <style name="Derzhava" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Можно ничего не настраивать, базовой темы достаточно.
+             Если захочешь — сюда потом добавим цвета / шрифты. -->
+    </style>
+
+    <!-- Общий стиль наших фиолетовых кнопок -->
+    <style name="Derzhava.Button">
+        <item name="android:background">@drawable/bg_derzhava_button</item>
+        <item name="android:textColor">@color/derzhava_text_light</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minHeight">40dp</item>
+    </style>
+
+    <style name="Derzhava.TopMenuButton" parent="Derzhava.Button">
+
+        <!-- более мелкий текст, чтобы влезало "Сообщения (0)" -->
+        <item name="android:textSize">11sp</item>
+
+        <!-- поменьше внутренних отступов -->
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+
+        <!-- убираем лишнюю высоту кнопки -->
+        <item name="android:minHeight">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Derzhava.SmallButton" parent="Derzhava.Button">
+        <!-- поменьше текст -->
+        <item name="android:textSize">12sp</item>
+
+        <!-- компактные отступы -->
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+
+        <!-- именно этот фон используем -->
+        <item name="android:background">@drawable/bg_derzhava_button_orange</item>
+
+        <!-- отключаем перекраску фиолетовым, если Derzhava.Button наследуется от Material -->
+        <item name="backgroundTint">@null</item>
+    </style>
+
+
+</resources>

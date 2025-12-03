@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/derzhava_header"
+    android:padding="8dp"
+    android:layout_marginTop="4dp">
+
+    <TextView
+        android:id="@+id/tvSeller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Государство ..."
+        android:textColor="@color/derzhava_text_dark"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Кол-во, цена, всего"
+        android:textColor="@color/derzhava_text_dark"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/btnBuy"
+        style="@style/Derzhava.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Купить" />
+
+</LinearLayout>

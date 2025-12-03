@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок -->
+        <TextView
+            android:id="@+id/tvBuildTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Стройплощадка"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Ресурсы игрока -->
+        <TextView
+            android:id="@+id/tvResources"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Ресурсы:"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="14sp" />
+
+        <!-- КОМБИНАТ -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Комбинат"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvKombinatCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стоимость..."
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnBuildKombinat"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Построить Комбинат" />
+
+        <!-- ГОРОДОК -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Городок"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTownCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стоимость..."
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnBuildTown"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Построить Городок" />
+
+        <!-- КОМАНДНЫЙ ЦЕНТР -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Командный центр"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCommandCenterCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стоимость..."
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnBuildCommandCenter"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Построить Командный центр" />
+
+        <!-- ВОЕННАЯ БАЗА -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Военная база"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWarBaseCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стоимость..."
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnBuildWarBase"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Построить Военную базу" />
+
+        <!-- ПЕРИМЕТР -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Периметр"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPerimetrCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стоимость..."
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnBuildPerimetr"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Построить Периметр" />
+
+        <!-- БИРЖА -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Биржа"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvBirzhaCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стоимость..."
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnBuildBirzha"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Построить Биржу" />
+
+        <!-- СТОРОЖЕВАЯ БАШНЯ -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Сторожевая башня"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWatchTowerCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стоимость..."
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnBuildWatchTower"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Построить Сторожевую башню" />
+
+        <!-- Назад -->
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Назад в Державу" />
+
+    </LinearLayout>
+</ScrollView>

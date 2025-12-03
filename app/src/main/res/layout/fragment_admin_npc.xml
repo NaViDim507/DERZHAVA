@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок вкладки, как в остальных экранах -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="NPC-ГОСУДАРСТВА"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Краткое описание экрана -->
+        <TextView
+            android:id="@+id/tvNpcInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Здесь ты создаёшь и настраиваешь NPC-страны: ресурсы, здания, армию."
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="14sp" />
+
+        <!-- Карточка со списком NPC, в стиле bg_derzhava_button_base -->
+        <LinearLayout
+            android:id="@+id/layoutNpcListWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_derzhava_button_base"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvNpcListTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Список NPC-стран"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Список стран-NPC, сюда фрагмент будет динамически добавлять элементы -->
+            <LinearLayout
+                android:id="@+id/listContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <!-- Кнопка создания NPC, как все кнопки в игре -->
+        <Button
+            android:id="@+id/btnAddNpc"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Создать NPC-страну" />
+
+        <!-- Кнопка для перехода к списку игроков (не NPC). Отображается список всех пользователей, у кого is_npc = 0. -->
+        <Button
+            android:id="@+id/btnPlayers"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Игроки" />
+
+        <!-- Опционально: кнопка назад, как в военной базе/командном центре -->
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Назад в Державу" />
+
+    </LinearLayout>
+</ScrollView>

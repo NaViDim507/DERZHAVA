@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_derzhava_button_base"
+    android:padding="8dp"
+    android:layout_marginTop="6dp">
+
+    <!-- Название страны + статус отношений -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Государство"
+            android:textColor="@color/derzhava_title_gold"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRelation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:text="враг"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Статы цели -->
+    <TextView
+        android:id="@+id/tvStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Периметр: 100, Охрана: 20, Казна: 500"
+        android:textColor="@color/derzhava_text_light"
+        android:textSize="12sp" />
+
+    <!-- Кнопки операций: разведка / диверсия / воровство -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRecon"
+            style="@style/Derzhava.Button"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="Разведка"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnSabotage"
+            style="@style/Derzhava.Button"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="Диверсия"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/btnTheft"
+            style="@style/Derzhava.Button"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="Воровство"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Союз / разрыв союза отдельной строкой -->
+    <Button
+        android:id="@+id/btnAlliance"
+        style="@style/Derzhava.Button"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="4dp"
+        android:text="Союз"
+        android:textSize="11sp" />
+		
+	<Button
+        android:id="@+id/btnDeclareWar"
+        style="@style/Derzhava.Button"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="4dp"
+        android:text="Объявить войну" 
+	    android:textSize="11sp" />/>
+
+
+</LinearLayout>

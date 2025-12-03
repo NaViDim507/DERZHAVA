@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Шапка -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="ГОРОДОК"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Общая инфа: уровень + прирост + потребление зерна -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_derzhava_button_base"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Уровень: 1"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- строка прироста + маленькая оранжевая кнопка -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvGrowthInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Прирост(+0)[включен]"
+                    android:textColor="@color/derzhava_button_text"
+                    android:textSize="13sp" />
+
+<Button
+    android:id="@+id/btnToggleGrowth"
+    style="@style/Derzhava.SmallButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="включить" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvGrainInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Общее потребление зерна[0]"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Население -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_derzhava_button_base"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Население"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvHousing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Дома: 0 / 0 мест"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvPopulation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Общее население(0)"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvWorkers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Свободные рабочие[0]"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvArmyPeople"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Военные: 0"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Городские действия -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_derzhava_button_base"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Городские действия"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTaxesInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Сбор налогов"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvStashInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="В тайнике (0) денег"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvBunkerInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="В бункере: пехота-(0) казаки-(0) гвардия-(0)"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnCollectTaxes"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Сбор налогов" />
+
+            <Button
+                android:id="@+id/btnStashToggle"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Тайник: добавить/забрать" />
+
+            <Button
+                android:id="@+id/btnBunkerSend"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Бункер: укрыть армию" />
+
+            <Button
+                android:id="@+id/btnBunkerReturn"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Бункер: вывести армию" />
+
+            <Button
+                android:id="@+id/btnKickWorkers"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Выгнать рабочих" />
+        </LinearLayout>
+
+        <!-- Назад -->
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Назад" />
+
+    </LinearLayout>
+</ScrollView>
