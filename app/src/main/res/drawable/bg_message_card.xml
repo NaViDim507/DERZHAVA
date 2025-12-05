@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Цвет блока примерно как остальные панели -->
+    <solid android:color="@color/derzhava_header" />
+
+    <!-- Лёгкая рамка по цвету фона экрана -->
+    <stroke
+        android:width="1dp"
+        android:color="@color/derzhava_bg" />
+
+    <!-- Скругления как у других блоков -->
+    <corners android:radius="12dp" />
+
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" />
+</shape>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок как на других экранах -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="ВОЙНА"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Блок общей информации о войне -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@color/derzhava_header">
+
+            <!-- Кто мы и против кого воюем -->
+            <TextView
+                android:id="@+id/tvSide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ты — атакующий против ..."
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Статус войны -->
+            <TextView
+                android:id="@+id/tvState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Война идёт"
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="13sp" />
+
+            <!-- Войска на территории -->
+            <TextView
+                android:id="@+id/tvArmy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Пехота: 0\nКазаки: 0\nГвардия: 0"
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="13sp" />
+
+            <!-- Таймеры рейдов / захвата -->
+            <TextView
+                android:id="@+id/tvTimers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Разведка/рейды: ...\nЗахват: ..."
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="12sp" />
+
+            <!-- Точность разведки -->
+            <TextView
+                android:id="@+id/tvReconAcc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Точность разведки: 0%"
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Блок действий -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@color/derzhava_header">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Действия"
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- Первый ряд кнопок: Разведка / Захват -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRecon"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Разведка" />
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/btnCapture"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Захватить страну"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <!-- Второй ряд кнопок: Подкрепление / Отзыв -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnReinforce"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Подкрепление" />
+
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/btnRecall"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Отозвать войска" />
+            </LinearLayout>
+
+            <!-- Третий ряд: Оборона (для защитника). Кнопка отображается только для обороняющейся стороны -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnDefense"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Отразить атаку"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Старые прямые рейды (сейчас скрываются во фрагменте) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRaidTown"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Рейд: городок" />
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/btnRaidBirzha"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Рейд: биржа" />
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="0dp" />
+
+                <Button
+                    android:id="@+id/btnRaidCc"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Рейд: КЦ" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Разрушение зданий идёт через кнопку «Разведка»."
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <!-- Блок журнала -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@color/derzhava_header">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Переброски войск"
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMoves"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Переброски войск пока не было."
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="12sp" />
+
+        <!-- Индикатор загрузки для сетевых операций. Показываем,
+             когда отправляются запросы на сервер (разведка, подкрепление и т.п.),
+             и скрываем, когда ответ получен. -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleLarge" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Журнал боевых действий"
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvLogs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Журнал боевых действий пуст."
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Кнопка назад -->
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Назад в Державу" />
+
+    </LinearLayout>
+</ScrollView>

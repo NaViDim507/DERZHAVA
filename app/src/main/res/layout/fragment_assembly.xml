@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <!-- Шапка -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/derzhava_header"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="АССАМБЛЕЯ"
+        android:textColor="@color/derzhava_text_dark"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Верхняя панель с кнопками -->
+<LinearLayout
+    android:id="@+id/topButtons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btnBack"
+        style="@style/Derzhava.TopMenuButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Назад" />
+
+    <Button
+        android:id="@+id/btnRefreshChat"
+        style="@style/Derzhava.TopMenuButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_weight="1"
+        android:text="Обновить" />
+
+    <Button
+        android:id="@+id/btnPrivates"
+        style="@style/Derzhava.TopMenuButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_weight="1"
+        android:text="Приваты" />
+</LinearLayout>
+
+
+
+    <!-- Подсказка и ранги -->
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/derzhava_text_dark"
+        android:textSize="12sp"
+		android:visibility="gone" />
+
+    <!-- Ошибки -->
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <!-- Лента чата (займёт всё свободное место) -->
+    <ScrollView
+        android:id="@+id/scrollChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:fadeScrollbars="false">
+
+        <LinearLayout
+            android:id="@+id/chatContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Поле ввода -->
+<LinearLayout
+    android:id="@+id/bottomInput"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/bg_chat_input"
+        android:hint="Сообщение..."
+        android:maxLines="4"
+        android:minLines="1"
+        android:imeOptions="actionSend"
+        android:inputType="textCapSentences|textMultiLine"
+        android:textColor="@color/derzhava_text_dark"
+        android:textColorHint="@color/derzhava_text_dark" />
+
+    <!-- Кнопка смайлов -->
+<Button
+    android:id="@+id/btnSmiles"
+    style="@style/Derzhava.Button"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_marginStart="6dp"
+    android:minWidth="0dp"
+    android:minHeight="0dp"
+    android:padding="0dp"
+    android:includeFontPadding="false"
+    android:text="😊"
+    android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnSend"
+        style="@style/Derzhava.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="Отпр." />
+</LinearLayout>
+
+
+</LinearLayout>

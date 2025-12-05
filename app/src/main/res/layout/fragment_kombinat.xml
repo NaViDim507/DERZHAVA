@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Шапка вкладки -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="КОМБИНАТ"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Уровень и краткая инфа -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_derzhava_button_base"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvLevel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Уровень: 1"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvShortInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Промышленный центр державы: технологии, производство и учёные."
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Псевдо-вкладки (меню разделов) -->
+        <LinearLayout
+            android:id="@+id/layoutTabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tabTech"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_derzhava_button"
+                android:gravity="center"
+                android:paddingVertical="8dp"
+                android:text="Технологии"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tabProduction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_derzhava_button_base"
+                android:gravity="center"
+                android:paddingVertical="8dp"
+                android:text="Производство"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tabScientists"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_derzhava_button_base"
+                android:gravity="center"
+                android:paddingVertical="8dp"
+                android:text="Учёные"
+                android:textColor="@color/derzhava_button_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Контент ТЕХНОЛОГИИ -->
+        <LinearLayout
+            android:id="@+id/groupTech"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_derzhava_button_base"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvCurrentTech"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Текущая технология: нет"
+                    android:textColor="@color/derzhava_button_text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_derzhava_button_base"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Доступные технологии (по мотивам nauka.php):"
+                    android:textColor="@color/derzhava_button_text"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvTechList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="- Переработка ресурсов\n- Энергосбережение\n- Улучшение шахт\n- Автоматизация комбината"
+                    android:textColor="@color/derzhava_button_text"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnStartResearch"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Запустить исследование" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Контент ПРОИЗВОДСТВО -->
+        <LinearLayout
+            android:id="@+id/groupProduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_derzhava_button_base"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvProductionMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Режим: сбалансированное производство"
+                    android:textColor="@color/derzhava_button_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvProductionInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Комбинат перерабатывает руду и древесину в металл и минеральные ресурсы. Позже сюда добавим точные формулы из оригинала."
+                    android:textColor="@color/derzhava_button_text"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnChangeMode"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Сменить режим" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Контент УЧЁНЫЕ -->
+        <LinearLayout
+            android:id="@+id/groupScientists"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_derzhava_button_base"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvScientists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Учёные: 0 (всего), 0 свободно"
+                    android:textColor="@color/derzhava_button_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvScientistsInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="В оригинале здесь распределяются боты/учёные по наукам. В мобилке это тоже будем делать, но пока оставляем как заглушку."
+                    android:textColor="@color/derzhava_button_text"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btnAutoAssignScientists"
+                    style="@style/Derzhava.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Распределить автоматически" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Кнопка назад -->
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Назад" />
+
+    </LinearLayout>
+</ScrollView>

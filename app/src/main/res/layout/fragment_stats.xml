@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Экран общей статистики. Оборачиваем содержимое в SwipeRefreshLayout для
+    поддержки жеста обновления и добавляем ProgressBar для индикации загрузки.
+-->
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок -->
+            <TextView
+                android:id="@+id/tvStatsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/derzhava_header"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="ОБЩАЯ СТАТИСТИКА"
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Индикатор загрузки -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:visibility="gone" />
+
+            <!-- Текстовые строки со статистикой -->
+            <TextView
+                android:id="@+id/tvTotalPlayers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Правителей: ?"
+                android:textColor="@color/derzhava_text_light"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTotalNpcs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="NPC стран: ?"
+                android:textColor="@color/derzhava_text_light"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTotalWars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Всего войн: ?"
+                android:textColor="@color/derzhava_text_light"
+                android:textSize="16sp" />
+
+            <!-- Placeholder для будущих метрик (кланы, альянсы, строек) -->
+            <TextView
+                android:id="@+id/tvClanCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Кланы: в разработке"
+                android:textColor="@color/derzhava_text_light"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvAllianceCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Альянсы: в разработке"
+                android:textColor="@color/derzhava_text_light"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvBuildCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Строений: в разработке"
+                android:textColor="@color/derzhava_text_light"
+                android:textSize="16sp" />
+
+            <!-- Кнопка назад -->
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Назад" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

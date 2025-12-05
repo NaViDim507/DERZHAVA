@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <!-- Экран генерала: показывает параметры генерала и позволяет
+         тренировать его характеристики -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок -->
+        <TextView
+            android:id="@+id/tvGeneralTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="ГЕНЕРАЛ"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Основные характеристики -->
+        <TextView
+            android:id="@+id/tvGeneralLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Уровень: ?"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvGeneralAttack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Атака: ?"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvGeneralDefense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Защита: ?"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvGeneralLeadership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Лидерство: ?"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvGeneralExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Опыт: ?"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="16sp" />
+
+        <!-- Кнопки тренировки -->
+        <Button
+            android:id="@+id/btnTrainAttack"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Тренировать атаку" />
+
+        <Button
+            android:id="@+id/btnTrainDefense"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Тренировать защиту" />
+
+        <Button
+            android:id="@+id/btnTrainLeadership"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Тренировать лидерство" />
+
+        <!-- Кнопка назад -->
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Назад" />
+    </LinearLayout>
+
+</ScrollView>

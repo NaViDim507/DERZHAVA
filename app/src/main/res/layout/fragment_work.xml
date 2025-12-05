@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Строится: ..."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/derzhava_text_light"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/tvRemainingTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="До завершения: ..."
+            android:textSize="16sp"
+            android:textColor="@color/derzhava_text_light"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvWorkersOnTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="На работе: ..."
+            android:textSize="16sp"
+            android:textColor="@color/derzhava_text_light"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvFreeWorkers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Свободные рабочие: ..."
+            android:textSize="16sp"
+            android:textColor="@color/derzhava_text_light"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnAddWorkers"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добавить рабочих" />
+
+        <Button
+            android:id="@+id/btnRemoveWorkers"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Отозвать рабочих" />
+
+        <Button
+            android:id="@+id/btnCancelBuild"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Прервать стройку" />
+    </LinearLayout>
+</ScrollView>

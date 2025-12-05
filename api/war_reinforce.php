@@ -100,11 +100,27 @@ $updWar->execute([$peh, $kaz, $gva, $warId]);
 $now = time();
 
 // записываем движение
-$insMove = $pdo->prepare('
-    INSERT INTO war_moves_app (war_id, type, ts, peh, kaz, gva, note)
-    VALUES (?, "reinforce", ?, ?, ?, ?, ?)
-');
-$insMove->execute([$warId, $now, $peh, $kaz, $gva, "Подкрепление отправлено"]);
+//
+// Таблица war_moves_app в схеме содержит поля:
+//   id, war_id, ts, move_type, payload
+// Ранее здесь вставлялись значения в несуществующие колонки (type, peh, kaz, gva, note),
+// что приводило к SQL‑ошибкам и HTTP 500. Теперь используем существующие колонки
+// и сериализуем детали операции в JSON‑payload. Это позволяет хранить любые параметры
+// без изменения структуры таблицы.
+
+// Формируем JSON‑payload со всеми параметрами подкрепления и небольшим описанием.
+// При необходимости можно добавить новые поля, сохраняя обратную совместимость.
+$payload = json_encode([
+    'peh'  => $peh,
+    'kaz'  => $kaz,
+    'gva'  => $gva,
+    'note' => 'Подкрепление отправлено'
+]);
+
+$insMove = $pdo->prepare(
+    'INSERT INTO war_moves_app (war_id, ts, move_type, payload) VALUES (?, ?, ?, ?)'
+);
+$insMove->execute([$warId, $now, 'reinforce', $payload]);
 
 $insLog = $pdo->prepare('
     INSERT INTO war_logs_app (war_id, ts, text)

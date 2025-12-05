@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <!-- Профиль игрока: отображение информации о правителе и стране,
+         а также действия смены пароля и выхода из игры. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок -->
+        <TextView
+            android:id="@+id/tvProfileTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="ПРОФИЛЬ"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Имя правителя -->
+        <TextView
+            android:id="@+id/tvProfileRulerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Логин: ..."
+            android:textColor="@color/derzhava_title_gold"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Название страны -->
+        <TextView
+            android:id="@+id/tvProfileCountryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Держава: ..."
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Кнопка смены пароля -->
+        <Button
+            android:id="@+id/btnChangePassword"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Сменить пароль" />
+
+        <!-- Кнопка выхода из аккаунта -->
+        <Button
+            android:id="@+id/btnLogout"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Выход из аккаунта" />
+
+        <!-- Кнопка назад -->
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Назад" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Экран лидеров. Используем SwipeRefreshLayout для поддержания жеста «потянуть
+    вниз, чтобы обновить», и отображаем индикатор загрузки, пока данные
+    подгружаются. Внутри ScrollView размещён вертикальный LinearLayout с
+    заголовком, ProgressBar, списком категорий и кнопкой назад.
+-->
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок -->
+            <TextView
+                android:id="@+id/tvLeadersTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/derzhava_header"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="ЛИДЕРЫ ИГРЫ"
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Индикатор загрузки -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:visibility="gone" />
+
+            <!-- Контейнер для категорий лидеров. Каждая категория добавляется динамически
+                 в коде фрагмента. -->
+            <LinearLayout
+                android:id="@+id/leaderListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp" />
+
+            <!-- Кнопка назад -->
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Назад" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

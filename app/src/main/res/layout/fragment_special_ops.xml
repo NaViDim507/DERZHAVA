@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок вкладки -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:text="СОСЕДИ"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Общее описание работы с соседями -->
+        <TextView
+            android:id="@+id/tvOpsInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Соседи делятся на западных и восточных. Запад — те, кто пришёл в мир раньше тебя, восток — позже. Здесь выбираются цели для разведки, диверсий, воровства и союзов."
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="14sp" />
+
+        <!-- Переключатель направления: Запад / Восток -->
+        <LinearLayout
+            android:id="@+id/layoutDirectionSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnWest"
+                style="@style/Derzhava.TopMenuButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Запад" />
+
+            <Button
+                android:id="@+id/btnEast"
+                style="@style/Derzhava.TopMenuButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Восток" />
+        </LinearLayout>
+
+        <!-- Список соседей для выбранного направления -->
+        <LinearLayout
+            android:id="@+id/targetsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical" />
+
+        <!-- Назад -->
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Derzhava.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Назад" />
+
+    </LinearLayout>
+</ScrollView>

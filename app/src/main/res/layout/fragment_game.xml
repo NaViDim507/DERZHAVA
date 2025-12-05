@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/derzhava_bg"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Логотип -->
+        <TextView
+            android:id="@+id/tvGameLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/derzhava_header"
+            android:gravity="center"
+            android:paddingVertical="12dp"
+            android:text="ДЕРЖАВА"
+            android:textColor="@color/derzhava_text_dark"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- Верхнее меню -->
+        <LinearLayout
+            android:id="@+id/topMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/btnRefresh"
+			style="@style/Derzhava.TopMenuButton"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:text="Сообщения (0)" />
+
+		<Button
+			android:id="@+id/btnAssembly"
+			style="@style/Derzhava.TopMenuButton"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="4dp"
+			android:layout_weight="1"
+			android:text="Ассамблея" />
+
+		<Button
+			android:id="@+id/btnProfileTop"
+			style="@style/Derzhava.TopMenuButton"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="4dp"
+			android:layout_weight="1"
+			android:text="Обновить" />
+
+		<Button
+			android:id="@+id/btnStats"
+			style="@style/Derzhava.TopMenuButton"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="4dp"
+			android:layout_weight="1"
+			android:text="Статистика" />
+        </LinearLayout>
+
+        <!-- Тонкий разделитель -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="#CCAA77" />
+
+        <!-- Панель ресурсов -->
+        <LinearLayout
+            android:id="@+id/resourcePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+<TextView
+    android:id="@+id/tvCountryName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:gravity="center"
+    android:text="Название державы"
+    android:textAlignment="center"
+    android:textColor="@color/derzhava_title_gold"
+    android:textSize="22sp"
+    android:textStyle="bold"
+    android:fontFamily="serif" />
+
+<TextView
+    android:id="@+id/tvRulerName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:gravity="center"
+    android:textAlignment="center"
+    android:text="Правитель (логин): ..."
+    android:textColor="@color/derzhava_text_light"
+    android:textSize="14sp"
+    android:fontFamily="sans-serif-medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Деньги: 0"
+                    android:textColor="@color/derzhava_text_light"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvFood"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Зерно: 0"
+                    android:textColor="@color/derzhava_text_light"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:visibility="gone">
+				
+                <TextView
+                    android:id="@+id/tvWood"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Дерево: 0"
+                    android:textColor="@color/derzhava_text_light"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvMetal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Металл: 0"
+                    android:textColor="@color/derzhava_text_light"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+<!-- Блок активной войны на главном экране -->
+        <!-- Блок активных войн -->
+        <LinearLayout
+            android:id="@+id/layoutWarBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp"
+            android:background="@drawable/bg_war_card"
+            android:orientation="vertical"
+            android:elevation="2dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvWarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Войны"
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvWarSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Идут активные войны"
+                android:textColor="@color/derzhava_text_dark"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <!-- Блок строительства (вывод очереди стройки) -->
+        <TextView
+            android:id="@+id/tvConstructionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Строительство:"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvConstructionList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="..."
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+
+        <!-- Управление государством -->
+        <TextView
+            android:id="@+id/tvMenuTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="4dp"
+            android:text="Управление государством"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/menuContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnCommandCenter"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Командный центр"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnBirzha"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Биржа"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnWarBase"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Военная база"
+                android:visibility="gone" />
+
+            <!-- Удалена кнопка генерала. Тренировка генерала осуществляется
+                 только через командный центр, как в оригинальной игре. -->
+
+            <Button
+                android:id="@+id/btnKombinat"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Комбинат"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnTown"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Городок"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnPerimetr"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Периметр"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnWatchTower"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Сторожевая башня"
+                android:visibility="gone" />
+				
+            <Button
+                android:id="@+id/btnBuildSite"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Стройплощадка"
+				android:visibility="gone" />
+				
+        </LinearLayout>
+
+        <!-- Статистика державы -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="4dp"
+            android:text="Статистика державы"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+	
+        <LinearLayout
+            android:id="@+id/statsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+			
+            <Button
+			android:id="@+id/tvGold"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Деньги [0]" />
+				
+            <Button
+                android:id="@+id/btnTerritory"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Территория [0/0]" />
+
+            <Button
+                android:id="@+id/btnPopulation"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Население [0]" />
+
+            <Button
+                android:id="@+id/btnResources"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Ресурсы [0]" />
+        </LinearLayout>
+
+        <!-- Сообщество и справка -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="4dp"
+            android:text="Сообщество и справка"
+            android:textColor="@color/derzhava_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/communityContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnClan"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Клан" />
+
+            <Button
+                android:id="@+id/btnAllClans"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Все кланы Державы" />
+
+            <Button
+                android:id="@+id/btnLeaders"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Лидеры игры" />
+
+            <Button
+                android:id="@+id/btnRules"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Правила игры" />
+
+            <Button
+                android:id="@+id/btnDevArticle"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Статья по развитию" />
+
+            <Button
+                android:id="@+id/btnAdminPanel"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Администрация"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnRadio"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Онлайн Радио" />
+
+            <Button
+                android:id="@+id/btnSatelliteMap"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Земля со спутника" />
+
+            <Button
+                android:id="@+id/btnHallOfFame"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Зал славы турниров" />
+
+<Button
+    android:id="@+id/btnWml"
+    style="@style/Derzhava.Button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:text="Профиль / Выход" />
+
+            <Button
+                android:id="@+id/btnVk"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Мы ВКонтакте" />
+
+            <Button
+                android:id="@+id/btnPortal"
+                style="@style/Derzhava.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Портал" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
